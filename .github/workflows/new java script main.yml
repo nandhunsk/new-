@@ -20,7 +20,7 @@ jobs:
 
     - name: Download the Qwiet CLI and set permissions
       run: |
-        curl https://cdn.shiftleft.io/download/sl > ${GITHUB_WORKSPACE}/sl && chmod a+rx ${GITHUB_WORKSPACE}/sl
+        curl https://cdn.shiftleft.io/download/sl > ${nandhunsk/new-}/sl && chmod a+rx ${nandhunsk/new-}/sl
 
     # Qwiet requires Java 1.8
     - name: Set up Java
@@ -29,6 +29,6 @@ jobs:
         java-version: 1.8
 
     - name: Analyze application with Qwiet
-      run: ${GITHUB_WORKSPACE}/sl analyze --app ShiftLeftJS --tag branch=${{ github.head_ref || steps.extract_branch.outputs.branch }} --js $(pwd)
+      run: ${nandhunsk/new-}/sl analyze --app ShiftLeftJS --tag branch=${{ github.head_ref || steps.extract_branch.outputs.branch }} --js $(pwd)
       env:
         SHIFTLEFT_ACCESS_TOKEN: ${{ secrets.eyJhbGciOiJSUzUxMiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJhcGl2NCIsImV4cCI6MTc0NTQ5MTUyNiwiaWF0IjoxNzEzOTU1NDY2LCJpc3MiOiJTaGlmdExlZnQiLCJvcmdJRCI6ImNiYWNhN2U1LWI4YzAtNGUwMC04Y2FkLWI4MGJmYzQ1NGU5NSIsInRva2VuSUQiOiJkMTAyYzkyNC0wNzI2LTQ3ZmYtYmJhMy04OTc5MTJmMzg0YmUiLCJzY29wZXMiOlsiZXh0ZW5kZWQiXX0.esK3xY-NorvNuFQe2ovrZRBcqg2m8oJdYIg1GzqfXxWs9TLliPNzaD2WyU1pzOygzTlKpujg4YFFLi3W2tFrRuB_roTedrCwCOEopy8Qht3WM5jHy7W8JzimVoCWKlIzWrC-8oyBcftivBYLWW1mv9NBQhzaQTMCPYDnmA-j6jmFYTsJkwJTGTz2-F6oSMS8fQTBjteBoic7owvL-rZ-g3aywJ-zbQaYVb_CgzxfJlj0-p8aO0wKR4a1y64zpRYFwAl5A_SXivxY99nWGUbG1_RZUk5d493RrHTRbkxWIh0KEyI6Ejf3kQ5wSFoEEI-4oKuGllxrOUTYl6qFN7W6MQ }}
